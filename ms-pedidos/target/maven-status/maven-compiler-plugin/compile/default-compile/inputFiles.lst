@@ -1,0 +1,13 @@
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\dto\StockRequest.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\dto\PedidoRequest.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\repository\PedidoRepository.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\entity\EstadoPedido.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\entity\Pedido.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\dto\OperacionResponse.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\dto\PedidoResponse.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\client\InventarioClient.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\exception\ResourceNotFoundException.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\controller\PedidoController.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\exception\GlobalExceptionHandler.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\MsPedidosApplication.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-pedidos\src\main\java\com\saga\pedidos\service\PedidoService.java

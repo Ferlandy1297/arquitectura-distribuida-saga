@@ -1,0 +1,160 @@
+{
+  "info": {
+    "name": "arquitectura-distribuida-fase1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Inventario - GET lista",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_inventario}}/inventario", "host": ["{{base_inventario}}"], "path": ["inventario"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Array de inventario', function () { pm.expect(pm.response.json()).to.be.an('array'); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Inventario - POST reservar",
+      "request": {
+        "method": "POST",
+        "header": [ {"key":"Content-Type","value":"application/json"} ],
+        "body": { "mode": "raw", "raw": "{\n  \"producto\": \"Laptop\",\n  \"cantidad\": 2\n}" },
+        "url": { "raw": "{{base_inventario}}/inventario/reservar", "host": ["{{base_inventario}}"], "path": ["inventario","reservar"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('success true', () => pm.expect(json.success).to.eql(true));",
+              "pm.test('stockActual presente', () => pm.expect(json).to.have.property('stockActual'));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Inventario - POST liberar",
+      "request": {
+        "method": "POST",
+        "header": [ {"key":"Content-Type","value":"application/json"} ],
+        "body": { "mode": "raw", "raw": "{\n  \"producto\": \"Laptop\",\n  \"cantidad\": 1\n}" },
+        "url": { "raw": "{{base_inventario}}/inventario/liberar", "host": ["{{base_inventario}}"], "path": ["inventario","liberar"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('success true', () => pm.expect(json.success).to.eql(true));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos - POST crear OK",
+      "request": {
+        "method": "POST",
+        "header": [ {"key":"Content-Type","value":"application/json"} ],
+        "body": { "mode": "raw", "raw": "{\n  \"producto\": \"Mouse\",\n  \"cantidad\": 1\n}" },
+        "url": { "raw": "{{base_pedidos}}/pedidos", "host": ["{{base_pedidos}}"], "path": ["pedidos"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('estado COMPLETADO', () => pm.expect(json.estado).to.eql('COMPLETADO'));",
+              "pm.environment.set('pedido_id', json.id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos - POST crear insuficiente",
+      "request": {
+        "method": "POST",
+        "header": [ {"key":"Content-Type","value":"application/json"} ],
+        "body": { "mode": "raw", "raw": "{\n  \"producto\": \"Laptop\",\n  \"cantidad\": 1000\n}" },
+        "url": { "raw": "{{base_pedidos}}/pedidos", "host": ["{{base_pedidos}}"], "path": ["pedidos"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('estado CANCELADO', () => pm.expect(json.estado).to.eql('CANCELADO'));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos - GET lista",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_pedidos}}/pedidos", "host": ["{{base_pedidos}}"], "path": ["pedidos"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Array de pedidos', () => pm.expect(pm.response.json()).to.be.an('array'));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos - GET por id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_pedidos}}/pedidos/{{pedido_id}}", "host": ["{{base_pedidos}}"], "path": ["pedidos","{{pedido_id}}"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "const json = pm.response.json();",
+              "pm.test('Tiene id', () => pm.expect(json).to.have.property('id'));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}
+

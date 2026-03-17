@@ -1,0 +1,15 @@
+com\saga\pedidos\controller\PedidoController.class
+com\saga\pedidos\repository\PedidoRepository.class
+com\saga\pedidos\entity\Pedido.class
+com\saga\pedidos\dto\StockRequest.class
+com\saga\pedidos\exception\ResourceNotFoundException.class
+com\saga\pedidos\entity\Pedido$PedidoBuilder.class
+com\saga\pedidos\MsPedidosApplication.class
+com\saga\pedidos\dto\OperacionResponse.class
+com\saga\pedidos\dto\PedidoResponse$PedidoResponseBuilder.class
+com\saga\pedidos\entity\EstadoPedido.class
+com\saga\pedidos\service\PedidoService.class
+com\saga\pedidos\client\InventarioClient.class
+com\saga\pedidos\exception\GlobalExceptionHandler.class
+com\saga\pedidos\dto\PedidoRequest.class
+com\saga\pedidos\dto\PedidoResponse.class

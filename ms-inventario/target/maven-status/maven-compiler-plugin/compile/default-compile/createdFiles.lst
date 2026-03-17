@@ -1,0 +1,15 @@
+com\saga\inventario\dto\OperacionResponse.class
+com\saga\inventario\entity\Inventario$InventarioBuilder.class
+com\saga\inventario\repository\InventarioRepository.class
+com\saga\inventario\service\InventarioService.class
+com\saga\inventario\exception\GlobalExceptionHandler.class
+com\saga\inventario\exception\InsufficientStockException.class
+com\saga\inventario\dto\InventarioItemResponse.class
+com\saga\inventario\dto\OperacionResponse$OperacionResponseBuilder.class
+com\saga\inventario\MsInventarioApplication.class
+com\saga\inventario\config\DataLoader.class
+com\saga\inventario\entity\Inventario.class
+com\saga\inventario\exception\NotFoundException.class
+com\saga\inventario\dto\InventarioItemResponse$InventarioItemResponseBuilder.class
+com\saga\inventario\dto\StockRequest.class
+com\saga\inventario\controller\InventarioController.class

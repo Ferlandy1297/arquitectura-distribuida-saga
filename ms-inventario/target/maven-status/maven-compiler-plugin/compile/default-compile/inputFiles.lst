@@ -1,0 +1,12 @@
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\entity\Inventario.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\service\InventarioService.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\exception\NotFoundException.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\MsInventarioApplication.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\controller\InventarioController.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\repository\InventarioRepository.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\exception\GlobalExceptionHandler.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\dto\StockRequest.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\exception\InsufficientStockException.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\config\DataLoader.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\dto\InventarioItemResponse.java
+C:\Users\Hp\Documents\7to Ciclo\Base de Datos II\arquitectura-distribuida-saga\ms-inventario\src\main\java\com\saga\inventario\dto\OperacionResponse.java
